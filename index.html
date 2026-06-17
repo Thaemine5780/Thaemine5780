@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회식 장소 후보</title>
+    <style>
+        /* 나눔스퀘어 네오 웹 폰트 불러오기 */
+        @import url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo.css');
+
+        /* 모노톤 및 미니멀 변수 설정 */
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111111;
+            --text-sub: #666666;
+            --border-color: #e5e5e5;
+            --black: #000000;
+            --white: #ffffff;
+            --radius: 4px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            /* 폰트를 나눔스퀘어 네오로 일괄 적용 */
+            font-family: 'NanumSquareNeo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 540px;
+        }
+
+        /* 미니멀 헤더 */
+        header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--black);
+        }
+
+        header .badge {
+            display: inline-block;
+            border: 1px solid var(--text-main);
+            color: var(--text-main);
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 800; /* 나눔스퀘어 네오의 굵은 느낌 강조 */
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
+
+        /* 리스트 및 카드 디자인 */
+        .venue-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .venue-card {
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: var(--radius);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .venue-header {
+            margin-bottom: 12px;
+        }
+
+        .venue-category {
+            font-size: 0.75rem;
+            color: var(--text-sub);
+            font-weight: 700;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .venue-name {
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+
+        .venue-desc {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+
+        /* 이미지 영역 */
+        .venue-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 16px;
+            background-color: #f5f5f5;
+            border: 1px solid var(--border-color);
+        }
+
+        /* 모노톤 버튼 */
+        .btn-link {
+            display: block;
+            width: 100%;
+            background-color: var(--black);
+            color: var(--white);
+            text-align: center;
+            text-decoration: none;
+            padding: 14px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border-radius: var(--radius);
+            border: 1px solid var(--black);
+            transition: all 0.2s ease;
+        }
+
+        .btn-link:hover {
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        /* 미니멀 푸터 */
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="badge">VOTE</span>
+        <h1>회식 장소 투표</h1>
+        <p>후보지의 사진과 메뉴를 확인하고 소중한 한 표를 행사해주세요.</p>
+    </header>
+
+    <main class="venue-list">
+        <!-- 후보 1 -->
+        <section class="venue-card">
+            <div class="venue-header">
+                <span class="venue-category">Option 1</span>
+                <h2 class="venue-name">1. 호텔 페이토 뷔페</h2>
+            </div>
+            <p class="venue-desc">맛과 건강을 둘 다 챙기는 지중해실 런치 뷔페</p>
+            <img src="https://ugc-images.catchtable.co.kr/catchtable/shopinfo/slXt4CIfb4FLHOEkRObKQFA/m/a2cf1bb3cf5a4c8c811f6411180504fa?resizeType=details500&ftype=avif" alt="뷔페 이미지" class="venue-img">
+            <a href="https://app.catchtable.co.kr/ct/shop/peytohotel" target="_blank" class="btn-link">상세 정보 확인</a>
+        </section>
+
+        <!-- 후보 2 -->
+        <section class="venue-card">
+            <div class="venue-header">
+                <span class="venue-category">Option 2</span>
+                <h2 class="venue-name">2. 라폰다 양재</h2>
+            </div>
+            <p class="venue-desc">좋은 재료로 현지의 맛을 구현한 멕시코 요리</p>
+            <img src="https://ugc-images.catchtable.co.kr/shop/manager/images/7f3795f528b44b158a57fe53fed0f7cb?resizeType=details500&ftype=avif" alt="타코 이미지" class="venue-img">
+            <a href="https://app.catchtable.co.kr/ct/shop/lafonda?date=260619&personCount=6" target="_blank" class="btn-link">상세 정보 확인</a>
+        </section>
+
+        <!-- 후보 3 -->
+        <section class="venue-card">
+            <div class="venue-header">
+                <span class="venue-category">Option 3</span>
+                <h2 class="venue-name">3. 양산도 양재점</h2>
+            </div>
+            <p class="venue-desc">5년 전통의 비법 타래소스를 뿌린 겉바속촉 민물장어덮밥 전문점</p>
+            <img src="https://ugc-images.catchtable.co.kr/shop/manager/images/9804eb7cbf55432884dcd0678f7572ee?resizeType=details500&ftype=avif" alt="히츠마부시 이미지" class="venue-img">
+            <a href="https://app.catchtable.co.kr/ct/shop/yangsando_yangjae?type=WAITING&currentSuggestionType=SHOP_NAME" target="_blank" class="btn-link">상세 정보 확인</a>
+        </section>
+
+        <!-- 후보 4 -->
+        <section class="venue-card">
+            <div class="venue-header">
+                <span class="venue-category">Option 4</span>
+                <h2 class="venue-name">4. 무제오</h2>
+            </div>
+            <p class="venue-desc">제철 식재료, 한식 다이닝(양적음), 프라이빗 룸</p>
+            <img src="https://ugc-images.catchtable.co.kr/shop/manager/images/ec389e2c30714dd9b193e58e42ba32d2?resizeType=details500&ftype=avif" alt="한식 이미지" class="venue-img">
+            <a href="https://app.catchtable.co.kr/ct/shop/museo?type=DINING&searchFilters=E_104" target="_blank" class="btn-link">상세 정보 확인</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Company Dinner Voting. All rights reserved.</p>
+    </footer>
+</div>
+
+</body>
+</html>
